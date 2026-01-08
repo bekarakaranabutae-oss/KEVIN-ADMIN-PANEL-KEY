@@ -1,123 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kevin | Kiribati White Hat</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_Kiribati.svg/1280px-Flag_of_Kiribati.svg.png') no-repeat center top;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    position: relative;
-  }
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,50,0.6), rgba(0,0,0,0.7));
-    z-index: 0;
-  }
-  .card {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    margin: auto;
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  }
-  .profile {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid #00ffff;
-    object-fit: cover;
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-    transition: transform 0.3s;
-  }
-  .profile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff;
-  }
-  h1 {
-    margin-top: 15px;
-    font-size: 2.4rem;
-    color: #00ffff;
-  }
-  h2 {
-    margin-top: 25px;
-    color: #00ffff;
-  }
-  p, ul {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  ul li {
-    margin: 6px 0;
-  }
-  a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 22px;
-    background: #00ffff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 0 15px #00ffff;
-    transition: 0.3s;
-  }
-  a.button:hover {
-    box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffff;
-  }
-  footer {
-    margin-top: 25px;
-    font-size: 0.85rem;
-    color: #ccc;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Taake | Bio</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+    body { background: #0f2027; color: #fff; line-height:1.6; }
+    a { text-decoration:none; }
+
+    .container { max-width:1000px; margin:0 auto; padding:20px; }
+
+    header { text-align:center; padding:50px 0; }
+    header img { width:150px; height:150px; border-radius:50%; border:3px solid #ffdd57; object-fit:cover; }
+    header h1 { font-size:3rem; margin-top:20px; color:#ffdd57; }
+    header p { font-size:1.2rem; color:#ccc; margin-top:10px; }
+
+    .nav-links { text-align:center; margin-top:20px; }
+    .nav-links a {
+      display:inline-block; margin:5px 10px; padding:10px 20px; background:#ffdd57; color:#000; border-radius:5px; transition:0.3s;
+    }
+    .nav-links a:hover { background:#fff; transform:scale(1.05); }
+
+    section { padding:50px 0; border-bottom:1px solid #333; }
+    section h2 { font-size:2rem; color:#ffdd57; margin-bottom:20px; text-align:center; }
+    section p { max-width:800px; margin:0 auto 20px auto; text-align:center; }
+
+    .skills, .projects { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .skills div, .projects div {
+      background:rgba(255, 221, 87, 0.2); padding:20px; border-radius:10px; width:200px; text-align:center; transition:0.3s;
+    }
+    .skills div:hover, .projects div:hover { transform:scale(1.05); background:rgba(255, 221, 87,0.4); }
+
+    .contact form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px; }
+    .contact input, .contact textarea { padding:10px; border-radius:5px; border:none; }
+    .contact button { padding:10px; background:#ffdd57; border:none; color:#000; border-radius:5px; cursor:pointer; transition:0.3s; }
+    .contact button:hover { background:#fff; }
+
+    .love-bio { background: rgba(255, 0, 150, 0.2); padding:30px; border-radius:15px; max-width:700px; margin:20px auto; text-align:center; }
+    .love-bio p { color:#ff99cc; font-size:1.1rem; }
+    .love-bio h3 { color:#ff69b4; margin-bottom:15px; }
+
+    footer { text-align:center; padding:20px; color:#aaa; margin-top:20px; }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <img src="profile.jpg" alt="Kevin Taake">
+      <h1>Kevin Taake</h1>
+      <p>White Hat Hacker | Tech Explorer | Online Creator from Kiribati</p>
+      <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#love">My Love</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
 
-<div class="card">
-  <!-- Your photo -->
-  <img class="profile" src="profile.jpg" alt="Kevin">
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Kevin Taake, a passionate White Hat enthusiast from Kiribati. I love exploring new technologies, improving online security, and sharing my knowledge with the world. My goal is to create cool, creative online profiles and contribute to the tech community.</p>
+    </section>
 
-  <h1>KEVIN</h1>
-  <p>Kiribati White Hat • Tech Enthusiast • Modding Learner</p>
+    <!-- Love Section -->
+    <section id="love">
+      <h2>My Love</h2>
+      <div class="love-bio">
+        <h3>Fernanda Object Nei Teresa 😗</h3>
+        <p>I tangiriko nee 😗 – You are always in my heart and thoughts. Every moment is brighter because of you. Together we share memories, smiles, and endless happiness. 💖</p>
+      </div>
+    </section>
 
-  <h2>About Me</h2>
-  <ul>
-    <li>Age: 20</li>
-    <li>Country: Kiribati 🇰🇮</li>
-    <li>Status: Original White Hat</li>
-    <li>Interest: Coding, Security, Modding</li>
-  </ul>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>Cybersecurity</div>
+        <div>Web Development</div>
+        <div>Python Programming</div>
+        <div>Ethical Hacking</div>
+        <div>UI/UX Design</div>
+      </div>
+    </section>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML • CSS • JavaScript</li>
-    <li>Game & App Modding</li>
-    <li>Security Basics</li>
-  </ul>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div>
+          <h3>Online Portfolio</h3>
+          <p>Check out my portfolio of work and online profiles.</p>
+          <a href="https://bekarakaranabutae-oss.github.io/MY-PORTFOLIO/" target="_blank">View</a>
+        </div>
+        <div>
+          <h3>Telegram Bot</h3>
+          <p>Interactive bot project for Telegram.</p>
+          <a href="https://t.me/kevintaake" target="_blank">View</a>
+        </div>
+      </div>
+    </section>
 
-  <a class="button" href="https://t.me/kevintaake" target="_blank">Contact Me</a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align:center; margin-top:10px;">Or connect via <a href="https://t.me/kevintaake" target="_blank" style="color:#ffdd57;">Telegram</a> | <a href="https://github.com/kevintaake" target="_blank" style="color:#ffdd57;">GitHub</a></p>
+    </section>
 
-  <footer>
-    © 2026 Kevin | Kiribati<br>
-    Made with ❤️
-  </footer>
-</div>
-
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Kevin Taake | All rights reserved
+    </footer>
+  </div>
 </body>
 </html>
